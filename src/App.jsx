@@ -299,7 +299,7 @@ useEffect(() => {
   async function generateSummary() {
     try {
       setLlmLoading(true);
-console.log("PRODUCT SUMMARY BAŞLADI");
+
       const response = await fetch("https://cok-kaynakli-yorum-analizi.onrender.com/api/product-summary", {
         method: "POST",
         headers: {
