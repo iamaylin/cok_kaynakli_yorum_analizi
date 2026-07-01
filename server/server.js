@@ -85,7 +85,7 @@ Kurallar
     });
 
     res.json({
-  explanation: response.output_text,
+  summary: response.output_text,
 });
   } catch (error) {
     console.error(error);
@@ -140,8 +140,8 @@ Kurallar
     });
 
     res.json({
-      explanation: response.output_text,
-    });
+  explanation: response.output_text,
+});
   } catch (error) {
     console.error(error);
 
@@ -151,6 +151,8 @@ Kurallar
   }
 });
 
-app.listen(5001, () => {
-  console.log("Backend çalışıyor: http://localhost:5001");
+const PORT = process.env.PORT || 5001;
+
+app.listen(PORT, () => {
+  console.log(`Backend çalışıyor: ${PORT}`);
 });
