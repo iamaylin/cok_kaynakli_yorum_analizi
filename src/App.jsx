@@ -300,7 +300,7 @@ useEffect(() => {
     try {
       setLlmLoading(true);
 
-      const response = await fetch("http://localhost:5001/api/product-summary", {
+      const response = await fetch("https://cok-kaynakli-yorum-analizi.onrender.com/api/seller-summary", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -330,7 +330,7 @@ const allSellers = [
 ];
 
 for (const item of allSellers) {
-  const response = await fetch("http://localhost:5001/api/seller-summary", {
+  const response = await fetch("https://cok-kaynakli-yorum-analizi.onrender.com/api/seller-summary", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
